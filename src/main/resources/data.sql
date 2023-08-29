@@ -1,18 +1,15 @@
-INSERT INTO patients (first_name, last_name, email) VALUES
-                                                       ('John', 'Doe', 'john.doe@example.com'),
-                                                       ('Jane', 'Smith', 'jane.smith@example.com');
+-- Insert Doctors
+INSERT INTO doctors (insert_date_time, insert_user_id, last_update_date_time, last_update_user_id, is_deleted, first_name, last_name, specialization)
+VALUES (CURRENT_TIMESTAMP, 1, CURRENT_TIMESTAMP, 1, false, 'John', 'Doe', 'Cardiologist');
 
--- Insert sample doctors
-INSERT INTO doctors (first_name, last_name, specialization) VALUES
-                                                               ('Dr. Michael', 'Johnson', 'Cardiology'),
-                                                               ('Dr. Emily', 'Williams', 'Pediatrics');
+-- Insert Patients
+INSERT INTO patients (insert_date_time, insert_user_id, last_update_date_time, last_update_user_id, is_deleted, first_name, last_name, email)
+VALUES (CURRENT_TIMESTAMP, 1, CURRENT_TIMESTAMP, 1, false, 'Jane', 'Smith', 'jane@example.com');
 
--- Insert sample appointments
-INSERT INTO appointments (appointment_date_time, patient_id, doctor_id) VALUES
-                                                                           ('2023-09-01 10:00:00', 1, 1),
-                                                                           ('2023-09-02 14:30:00', 2, 2);
+-- Insert Appointments
+INSERT INTO appointments (insert_date_time, insert_user_id, last_update_date_time, last_update_user_id, is_deleted, appointment_date_time, patient_id, doctor_id)
+VALUES (CURRENT_TIMESTAMP, 1, CURRENT_TIMESTAMP, 1, false, '2023-09-01 10:00:00', 1, 1);
 
--- Insert sample prescriptions
-INSERT INTO prescription (medication, dosage, patient_id, doctor_id) VALUES
-                                                                         ('Painkiller', '500mg', 1, 1),
-                                                                         ('Antibiotic', '250mg', 2, 2);
+-- Insert Prescriptions
+INSERT INTO prescription (insert_date_time, insert_user_id, last_update_date_time, last_update_user_id, is_deleted, medication, dosage, patient_id, doctor_id)
+VALUES (CURRENT_TIMESTAMP, 1, CURRENT_TIMESTAMP, 1, false, 'Medicine A', '2 pills daily', 1, 1);

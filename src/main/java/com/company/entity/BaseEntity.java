@@ -31,6 +31,6 @@ public class BaseEntity implements Serializable {
     @Column(nullable = false)
     public Long lastUpdateUserId;
 
-  //  public Boolean isDeleted = false;
+   public Boolean isDeleted = false;
 
 }
